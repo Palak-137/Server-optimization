@@ -51,7 +51,7 @@ N: No of servers
 ### How to run 🤠
 <ul>
 <li> Compile all java files
-<li> Run the main file by giving two arguments
+<li> Run the main file in the server folder by giving two arguments
 <ul>
   <li> JSON file
   <li> number of server
