@@ -25,35 +25,39 @@ Pull based algorithm with internal heavy and normal buffers
 <br/>
 <br/>
 N: No of servers
-<br/><br/>
-We’ll keep avg processing time of last 2N messages as benchmark to define heavy and light tasks
-<br/><br/>
-Scheduler will maintain N * 0.3 sized heavy queue and N * 0.7 sized normal queue
-<br/><br/>
-Scheduler will initially poll for N Tasks and spread them in heavy and normal queue
-<br/><br/>
-Whenever a server polls for a message
-<br/><br/>
-If normal queue is empty
-<br/><br/>
-If heavy queue is empty pull data from data source, arrange it and return from heavy one if present otherwise from normal one
-<br/><br/>
-Else If heavy queue is not empty return from heavy queue
-<br/><br/>
-If normal queue is not empty
-<br/><br/>
-Return from normal queue
+<ul>
+<li>We’ll keep avg processing time of last 2N messages as benchmark to define heavy and light tasks
+<li>Scheduler will maintain N * 0.3 sized heavy queue and N * 0.7 sized normal queue
+<li>Scheduler will initially poll for N Tasks and spread them in heavy and normal queue
+<li>Whenever a server polls for a message
+<ul>
+<li>If normal queue is empty
+<ul>
+<li>If heavy queue is empty pull data from data source, arrange it and return from heavy one if present otherwise from normal one
+<li>Else If heavy queue is not empty return from heavy queue
+</ul>
+<li>If normal queue is not empty
+<ul>
+<li>Return from normal queue
+</ul>
+</ul>
 
+</ul>
+</ul>
 
 ![image](https://user-images.githubusercontent.com/54790525/206855827-bababf13-4784-4f58-917a-9a560748e47d.png)
 
 
 ### How to run 🤠
-1. Compile all java files
-2. Run the main file by giving two arguments
-  a. JSON file
-  b. number of server
+<ul>
+<li> Compile all java files
+<li> Run the main file by giving two arguments
+<ul>
+  <li> JSON file
+  <li> number of server
+</ul>
 
+</ul>
 
 
 ## Output 
